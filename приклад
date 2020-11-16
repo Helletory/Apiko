@@ -1,0 +1,41 @@
+const students = [
+    {
+        firstName: "Дмитро",
+        lastName: "Замора",
+        rating: 90
+    },
+    {
+        firstName: "Валік",
+        lastName: "Вижицький",
+        rating: 67
+    },
+    {
+        firstName: "Микола",
+        lastName: "Пилипчук",
+        rating: 100
+    },
+    {
+        firstName: "Андрій",
+        lastName: "Бойчук",
+        rating: 64
+    },
+    {
+        firstName: "Василь",
+        lastName: "Когут",
+        rating: 65
+    }    
+        ]
+        function compare(a, b) {
+    var splitA = a.split(" ");
+    var splitB = b.split(" ");
+    var lastA = splitA[splitA.length - 1];
+    var lastB = splitB[splitB.length - 1];
+
+    if (lastA < lastB) return -1;
+    if (lastA > lastB) return 1;
+    return 0;
+}
+function lastNameSort(a,b) {
+    return a.split(" ").pop()[0] > b.split(" ").pop()[0]
+};
+firstName.sort(lastNameSort);
